@@ -1,15 +1,32 @@
+import stylese from './FeedbackOptions.module.css';
+
 export const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
-    <div>
-      <button onClick={onLeaveFeedback} name="good" type="button">
+    <>
+      <button
+        className={stylese.buttonFeedbackGood}
+        onClick={onLeaveFeedback}
+        name="good"
+        type="button"
+      >
         Good
       </button>
-      <button onClick={onLeaveFeedback} name="neutral" type="button">
+      <button
+        className={stylese.buttonFeedbackNeutral}
+        onClick={onLeaveFeedback}
+        name="neutral"
+        type="button"
+      >
         Neutral
       </button>
-      <button onClick={onLeaveFeedback} name="bad" type="button">
+      <button
+        className={stylese.buttonFeedbackBad}
+        onClick={onLeaveFeedback}
+        name="bad"
+        type="button"
+      >
         Bad
       </button>
-    </div>
+    </>
   );
 };

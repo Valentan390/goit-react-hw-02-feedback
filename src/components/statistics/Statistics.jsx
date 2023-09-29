@@ -18,6 +18,7 @@
 //     );
 //   }
 // }
+import styles from './Statistics.module.css';
 
 export const Statistics = ({
   good,
@@ -27,12 +28,14 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <div>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}%</p>
+    <div className={styles.divStatistics}>
+      <p className={styles.statistics}>Good: {good}</p>
+      <p className={styles.statistics}>Neutral: {neutral}</p>
+      <p className={styles.statistics}>Bad: {bad}</p>
+      <p className={styles.statistics}>Total: {total}</p>
+      <p className={styles.statistics}>
+        Positive feedback: {positivePercentage}%
+      </p>
     </div>
   );
 };
